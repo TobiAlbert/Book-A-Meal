@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<title>Manage Menu</title>
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+<body>
+
+	<ul id="top-navbar">
+	        <li class="navbar-right"><a href="user_menu.html">Home</a></li>
+	        <li class="navbar-left"><a href="sign_in.html">Sign Out</a></li>
+	        <li class="navbar-left"><a href="#">Add</a></li>
+	        <li class="navbar-left"><a href="#">Delete</a></li>
+	        <li class="navbar-left"><a href="#">Modify</a></li>
+	        <li class="navbar-left"><a href="dashboard.html">Dashboard</a></li>
+    	</ul>
+
+    <div style="margin: 50px 10px">
+    	<h1>Manage Meals</h1>
+    </div>
+	<div class="container">
+
+		<h2>Set Menu For Any Day</h2>
+
+		<form>
+
+			<div  style="text-align: left;">
+				<label> Select Date: </label><input type="date"/><br>
+				<input type="radio" name="meal"></input> <label>Fried Rice</label><br>
+				<input type="radio" name="meal"></input> <label>Jollof Rice</label><br>
+				<input type="radio" name="meal"></input> <label>Bread and Beans</label><br>
+				<input type="radio" name="meal"></input> <label>Potatoes</label><br>
+				<input type="radio" name="meal"></input> <label>Eba</label><br>
+
+				<label>Add Price (&#8358;)</label>
+			</div>
+			
+			<input type="text"></input>
+			<input type="submit" value="Create"/>
+
+		</form>
+	</div>
+
+	<div class="container">
+		<h2>
+			Your meals
+			<hr>
+		</h2>
+
+		<div class="meal-card">
+			<img src="./images/fried_rice.jpg" alt="Meal">
+			<div class="card-text-container">
+				<h4>Fried Rice</h4>
+				<span>Price: #1500</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+				</p>
+			</div>
+			<input type="submit" value="Order"/>
+		</div>
+		<div class="meal-card">
+			<img src="./images/jollof.jpg" alt="Meal">
+			<div class="card-text-container">
+				<h4>Jollof Rice</h4>
+				<span>Price: #1200</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+				</p>
+			</div>
+			<input type="submit" value="Order"/>
+		</div>
+	</div>
+
+
+</body>
+</html>
