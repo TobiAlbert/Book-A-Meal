@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
-app.use(routes);
+app.use( '/api/v1/', routes);
 
 app.listen(PORT, () => {
     console.log(`now listening on port ${PORT}`);
