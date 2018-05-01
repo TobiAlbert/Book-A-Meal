@@ -1,4 +1,4 @@
-import db from '../db/db';
+import db from '../db/meals';
 
 class MealsController {
 
@@ -90,6 +90,28 @@ class MealsController {
             "meals":db
         });
 
+    }
+
+    deleteMeal(req, res) {
+        const id = parseInt(req.params.id, 10);
+
+        db.map((meal, index) => {
+            if (meal.id === id) {
+                db.splice(index, 1);
+
+                return res.status(201).send({
+                    success:true,
+                    message: 'meal successfully deleted',
+                    "meals":db
+                });
+            }
+        });
+
+
+        return res.status(404).send({
+            success:false,
+            message:'No such item found.'
+        })
     }
 }
 
