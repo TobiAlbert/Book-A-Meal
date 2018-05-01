@@ -6,5 +6,6 @@ import MealsController from '../controllers/MealsController';
 const router = express.Router();
 
 router.get('/meals', MealsController.getAllMeals);
+router.post('/meals', MealsController.createMeal);
 
 export default router;
