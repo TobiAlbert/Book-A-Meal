@@ -1,0 +1,28 @@
+{
+  "name": "book-a-meal",
+  "version": "1.0.0",
+  "description": "Web application that allows customers to make food orders and helps the food vendor (Caterer) know what the customers want to eat.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/nodemon app.js --exec babel-node --"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TobiAlbert/Book-A-Meal.git"
+  },
+  "author": "Tobi Daada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TobiAlbert/Book-A-Meal/issues"
+  },
+  "homepage": "https://github.com/TobiAlbert/Book-A-Meal#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.3"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1"
+  }
+}
