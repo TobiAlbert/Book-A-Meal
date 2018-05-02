@@ -1,4 +1,4 @@
-const meals = [
+const Meals = [
 
     {
         id:1,
@@ -27,4 +27,4 @@ const meals = [
 
 ];
 
-export default meals;
+export default Meals;

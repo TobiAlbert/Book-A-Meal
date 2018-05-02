@@ -1,4 +1,4 @@
-import db from '../db/meals';
+import Meals from '../db/Meals';
 
 class MealsController {
 
@@ -6,7 +6,7 @@ class MealsController {
         res.status(200).send({
             success:true,
             message: 'meals successfully retrieved',
-            'meals': db
+            'meals': Meals
         });
     }
 
@@ -29,17 +29,17 @@ class MealsController {
         }
 
         const meal = {
-            id: db.length + 1,
+            id: Meals.length + 1,
             name: req.body.name,
             description: req.body.description,
             price: req.body.price
         };
 
-        db.push(meal);
+        Meals.push(meal);
         return res.status(201).send({
             success:true,
             message: 'meal successfully created',
-            "meals":db
+            "meals":Meals
         });
 
     }
@@ -50,7 +50,7 @@ class MealsController {
         let mealFound;
         let mealIndex;
 
-        db.map((meal, index) => {
+        Meals.map((meal, index) => {
             if (meal.id === id) {
                 mealFound = meal;
                 mealIndex = index;
@@ -82,12 +82,12 @@ class MealsController {
             price: mealPrice || mealFound.price
         }
 
-        db.splice(mealIndex, 1,  updatedMeal);
+        Meals.splice(mealIndex, 1,  updatedMeal);
 
         return res.status(201).send({
             success:true,
             message:'Meal successfully updated',
-            "meals":db
+            "meals":Meals
         });
 
     }
@@ -95,14 +95,14 @@ class MealsController {
     deleteMeal(req, res) {
         const id = parseInt(req.params.id, 10);
 
-        db.map((meal, index) => {
+        Meals.map((meal, index) => {
             if (meal.id === id) {
-                db.splice(index, 1);
+                Meals.splice(index, 1);
 
                 return res.status(201).send({
                     success:true,
                     message: 'meal successfully deleted',
-                    "meals":db
+                    "meals":Meals
                 });
             }
         });
