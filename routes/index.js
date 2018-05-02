@@ -12,6 +12,7 @@ router.put('/meals/:id', MealsController.updateMeal);
 router.delete('/meals/:id', MealsController.deleteMeal);
 
 // Menus
+router.get('/menu', MenuController.getMenuForTheDay);
 router.post('/menu', MenuController.createMenu);
 
 export default router;
